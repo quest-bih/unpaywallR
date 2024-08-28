@@ -7,5 +7,5 @@ Install via:
 
 ``` r
 # install.packages("devtools") # if devtools currently not installed
-devtools::install_github("NicoRiedel/unpaywallR")
+devtools::install_github("quest-bih/unpaywallR")
 ```
