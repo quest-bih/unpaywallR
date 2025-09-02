@@ -1,7 +1,7 @@
 Package: unpaywallR
 Type: Package
 Title: R functions for unpaywall API
-Version: 0.1.0
+Version: 0.1.1
 Author: Nico Riedel
 Maintainer: Nico Riedel <nico.riedel@bihealth.de>
 Description: Functions that simplify using the unpaywall API with R. Uses 

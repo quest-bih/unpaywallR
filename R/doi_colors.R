@@ -92,8 +92,8 @@ dois_OA_pick_color <- function(df, color_hierarchy) {
 
   result <-
   df %>%
-    mutate(OA_colors = pick_color(OA_colors)) %>%
-    rename(OA_color = OA_colors)
+    dplyr::mutate(OA_colors = pick_color(OA_colors)) %>%
+    dplyr::rename(OA_color = OA_colors)
 
   return(result)
 }
@@ -153,6 +153,9 @@ dois_OA_pick_color <- function(df, color_hierarchy) {
 .get_loc_article_color <- function(oa_location, is_oa, journal_is_oa)
 {
   host_type <- oa_location$host_type
+  if (is.na(host_type)) {
+    host_type <- "repository"
+  } 
   article_license <- oa_location$license
 
   if(is.null(article_license) | is.na(article_license)) {
